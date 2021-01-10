@@ -93,6 +93,7 @@ button.active {
   border: none;
   color: white;
   cursor: pointer;
+  outline: none;
   border-radius: 30px;
   font-weight: bolder;
   margin-bottom: 20px;

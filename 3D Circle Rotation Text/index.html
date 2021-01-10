@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3D Rotating Text</title>
+	<link rel="stylesheet" type="text/css" href="splitting.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="circle" data-splitting>CIRCLE-TEXT-ANIMATION-EFFECTS-</div>
+	<script type="text/javascript" src="splitting.js"></script>
+	<script> Splitting(); </script>
+
+	<script type="text/javascript">
+		let circle = document.querySelector('.circle');
+		window.onmousemove = function(e){
+			let x = e.clientX/-2;
+			circle.style.transform = "perspective(1000px) rotateY(" + x + "deg) rotateX(15deg)";
+		}
+	</script>
+</body>
+</html>

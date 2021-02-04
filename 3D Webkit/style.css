@@ -1,0 +1,128 @@
+
+body {
+  background-color: #0a0a0a;
+  -webkit-perspective: 1000px;
+  overflow: hidden;
+}
+#folder {
+  position: relative;
+  left: 50%;
+  margin: 0 0 0 -400px;
+  width: 820px;
+  height: 420px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translateZ(-1200px) translateX(0px) translateY(250px) rotate3d(1.2, 0.4, 0, 80deg);
+  -webkit-animation: folder-move-out 1s;
+}
+#folder .left .grad,
+#folder .right .grad {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(#000000 31%, #6e6e6e 56%, #7d7d7d 20%);
+  opacity: 0.6;
+  -webkit-animation: left-move-out 1s;
+}
+#folder .left,
+#folder .right {
+  position: absolute;
+  width: 400px;
+  height: 420px;
+  background-image: url('https://4.bp.blogspot.com/-CU9wFv46wkY/ThIqegDpF0I/AAAAAAAADf4/STl6XlVa62U/s1600/Magic_Forest_by_camilkuo.jpg');
+}
+#folder .left {
+  left: 0px;
+  background-position: 0px 0px;
+  border: 10px solid #fff;
+  border-right: none;
+  -webkit-transform: translateZ(-47px) translateX(6px) rotate3d(0, 1, 0, 15deg);
+  -webkit-animation: left-move-out 1s;
+}
+#folder .right {
+  background-position: -400px 0px;
+  border: 10px solid #fff;
+  border-left: none;
+  -webkit-transform: translateZ(-47px) translateX(402px) rotate3d(0, -1, 0, 15deg);
+  -webkit-animation-timing-function: -webkit-ease-out;
+  -webkit-animation: right-move-out 1s;
+}
+#folder:hover {
+  -webkit-transform: translateZ(0px) translateX(0px) rotate3d(0, 0, 0, 0deg);
+  -webkit-animation: folder-move-in 1s;
+}
+#folder:hover .left {
+  -webkit-transform: translateZ(-100px) translateX(0px) rotate3d(0, 0, 0, 0deg);
+  -webkit-animation: left-move-in 1s;
+}
+#folder:hover .grad {
+  -webkit-animation: grad-move-in 1s;
+  opacity: 0;
+}
+#folder:hover .right {
+  -webkit-transform: translateZ(-100px) translateX(408px) rotate3d(0, 0, 0, 0deg);
+  -webkit-animation: right-move-in 1s;
+}
+@-webkit-keyframes folder-move-out {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0px) rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-1200px) translateX(0px) translateY(250px) rotate3d(1.2, 0.4, 0, 80deg);
+  }
+}
+@-webkit-keyframes folder-move-in {
+  0% {
+    -webkit-transform: translateZ(-1200px) translateX(0px) translateY(250px) rotate3d(1.2, 0.4, 0, 80deg);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(0px) rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes left-move-out {
+  0% {
+    -webkit-transform: translateZ(-100px) translateX(6px) rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-47px) translateX(6px) rotate3d(0, 1, 0, 15deg);
+  }
+}
+@-webkit-keyframes left-move-in {
+  0% {
+    -webkit-transform: translateZ(-47px) translateX(6px) rotate3d(0, 1, 0, 15deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-100px) translateX(0px) rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes right-move-out {
+  0% {
+    -webkit-transform: translateZ(-100px) translateX(409px) rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-47px) translateX(402px) rotate3d(0, -1, 0, 15deg);
+  }
+}
+@-webkit-keyframes right-move-in {
+  0% {
+    -webkit-transform: translateZ(-47px) translateX(403px) rotate3d(0, -1, 0, 15deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-100px) translateX(408px) rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes grad-move-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes grad-move-in {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}

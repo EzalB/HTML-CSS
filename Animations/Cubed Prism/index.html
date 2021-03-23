@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cubed Prism</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="cube">
+	  <div class="side front"></div>
+	  <div class="side back"></div>
+	  <div class="side right"></div>
+	  <div class="side left"></div>
+	  <div class="side top"></div>
+	  <div class="side bottom"></div>
+	</div>
+
+	<label> X:
+	<input type="range" min="0" max="360" value="130" data-var="--x" oninput="document.body.style.setProperty(this.dataset.var, this.value);" />
+	</label>
+
+	<label> Y:
+	<input type="range" min="0" max="360" value="45" data-var="--y" oninput="document.body.style.setProperty(this.dataset.var, this.value);" />
+	</label>
+
+	<label> Z:
+	<input type="range" min="0" max="360" value="0" data-var="--z" oninput="document.body.style.setProperty(this.dataset.var, this.value);"	 />
+	</label>
+
+	<div class="instructions">Hover for debug</div>
+</body>
+</html>

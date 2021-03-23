@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glitch Text</title>
+  <link rel="stylesheet" href="style.css">
+	<script>
+	    var xhttp = new XMLHttpRequest();
+	    xhttp.onreadystatechange = function() {
+	        if (this.readyState == 4 && this.status == 200) {
+	            var div = document.createElement('div');
+	            div.innerHTML = this.responseText;
+	            document.body.appendChild(div)
+	        }
+	    }
+	</script>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=VT323'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+</head>
+<body>
+	<canvas> </canvas>
+</body>
+<script  src="script.js"></script>
+</html>

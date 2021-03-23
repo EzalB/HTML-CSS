@@ -1,0 +1,38 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body,
+html {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff4b4b;
+}
+
+.stagger-visualizer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  height: 17rem;
+}
+
+.stagger-visualizer div {
+  /*position: absolute;*/
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+}

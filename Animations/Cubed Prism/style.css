@@ -1,0 +1,157 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html {
+  --gray: #322020;
+  --gradient: linear-gradient(135deg, #fecd1a, #ff4646 60%, #ff1b7f);
+  height: 100%;
+  background: radial-gradient(circle at center, var(--gray) 20%, #221111);
+  color: white;
+  font-family: monospace;
+  text-align: center;
+}
+
+body {
+  min-height: 100%;
+  perspective: 1000px;
+}
+
+.cube {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  display: grid;
+  font-size: 40vmin;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(var(--x, 135) * 1deg)) rotateY(calc(var(--y, 45) * 1deg)) rotateZ(calc(var(--z, 0) * 1deg));
+}
+
+.side {
+  grid-area: 1/1;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  --expand: translateZ(0.499em);
+  --transform3d: var(--rotate) var(--expand);
+  background: var(--gradient);
+}
+.side::before {
+  content: "";
+  display: block;
+  --size: 40px;
+  width: calc(100% + var(--size) * 2);
+  height: calc(100% + var(--size) * 2);
+  background: repeating-linear-gradient(135deg, var(--gray), var(--gray) calc(var(--size) / 2), transparent calc(var(--size) / 2), transparent var(--size));
+  -webkit-animation: slide 2s linear infinite;
+          animation: slide 2s linear infinite;
+}
+@-webkit-keyframes slide {
+  to {
+    transform: translate(calc(-1.41 * var(--size)), calc(-1.41 * var(--size)));
+  }
+}
+@keyframes slide {
+  to {
+    transform: translate(calc(-1.41 * var(--size)), calc(-1.41 * var(--size)));
+  }
+}
+
+.front {
+  transform: rotateY(0deg) var(--expand);
+}
+
+.back {
+  transform: rotateY(180deg) var(--expand) rotateZ(90deg);
+}
+
+.right {
+  transform: rotateY(90deg) var(--expand);
+}
+
+.left {
+  transform: rotateY(-90deg) var(--expand);
+}
+
+.top {
+  transform: rotateX(-90deg) var(--expand);
+}
+
+.bottom {
+  transform: rotateX(90deg) var(--expand);
+}
+
+.cube:hover .side::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  color: white;
+}
+.cube:hover .front::after {
+  content: "Front";
+}
+.cube:hover .back::after {
+  content: "Back";
+}
+.cube:hover .right::after {
+  content: "Right";
+}
+.cube:hover .left::after {
+  content: "Left";
+}
+.cube:hover .top::after {
+  content: "Top";
+}
+.cube:hover .bottom::after {
+  content: "Bottom";
+}
+.cube:hover .top,
+.cube:hover .bottom {
+  background: green;
+}
+.cube:hover .left,
+.cube:hover .right {
+  background: red;
+}
+.cube:hover .front,
+.cube:hover .back {
+  background: blue;
+}
+
+.front,
+.bottom,
+.left {
+  display: none;
+}
+
+label {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+body:hover label {
+  visibility: visible;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

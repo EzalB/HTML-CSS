@@ -1,0 +1,1262 @@
+@-webkit-keyframes anim-v {
+  0% {
+    transform: translate3d(0, 10vh, 0);
+  }
+  to {
+    transform: translate3d(0, -10vh, 0) rotate3d(0, 0, 1, 90deg);
+  }
+}
+@keyframes anim-v {
+  0% {
+    transform: translate3d(0, 10vh, 0);
+  }
+  to {
+    transform: translate3d(0, -10vh, 0) rotate3d(0, 0, 1, 90deg);
+  }
+}
+@-webkit-keyframes anim-h {
+  to {
+    transform: translate3d(0, 0, var(--dist, 0));
+  }
+}
+@keyframes anim-h {
+  to {
+    transform: translate3d(0, 0, var(--dist, 0));
+  }
+}
+@-webkit-keyframes anim-spin {
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@keyframes anim-spin {
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+@-webkit-keyframes anim-s {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+@keyframes anim-s {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes anim-r {
+  0% {
+    transform: rotate3d(1, 1, 0, 75deg) rotate3d(0, 0, -1, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 0, 75deg) rotate3d(0, 0, -1, 360deg);
+  }
+}
+@keyframes anim-r {
+  0% {
+    transform: rotate3d(1, 1, 0, 75deg) rotate3d(0, 0, -1, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 0, 75deg) rotate3d(0, 0, -1, 360deg);
+  }
+}
+:root {
+  --length: 100;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+section,
+ul,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #112d4e;
+  -webkit-animation: reveal 2s ease-in-out forwards;
+          animation: reveal 2s ease-in-out forwards;
+  perspective: 440vmin;
+}
+
+section {
+  -webkit-animation: anim-v 16s ease-in-out infinite alternate;
+          animation: anim-v 16s ease-in-out infinite alternate;
+}
+
+ul {
+  -webkit-animation: anim-r 16s linear infinite;
+          animation: anim-r 16s linear infinite;
+  list-style: none;
+  position: relative;
+}
+ul li:nth-child(1) {
+  --delay: 0.04s;
+  --dist: 0.9625vmin;
+  --size: 55vmin;
+}
+ul li:nth-child(1)::after {
+  --size: 27.5vmin;
+}
+ul li:nth-child(1)::before {
+  --size: 13.75vmin;
+}
+ul li:nth-child(2) {
+  --delay: 0.08s;
+  --dist: 1.925vmin;
+  --size: 53.9vmin;
+}
+ul li:nth-child(2)::after {
+  --size: 26.95vmin;
+}
+ul li:nth-child(2)::before {
+  --size: 13.475vmin;
+}
+ul li:nth-child(3) {
+  --delay: 0.12s;
+  --dist: 2.8875vmin;
+  --size: 52.8vmin;
+}
+ul li:nth-child(3)::after {
+  --size: 26.4vmin;
+}
+ul li:nth-child(3)::before {
+  --size: 13.2vmin;
+}
+ul li:nth-child(4) {
+  --delay: 0.16s;
+  --dist: 3.85vmin;
+  --size: 51.7vmin;
+}
+ul li:nth-child(4)::after {
+  --size: 25.85vmin;
+}
+ul li:nth-child(4)::before {
+  --size: 12.925vmin;
+}
+ul li:nth-child(5) {
+  --delay: 0.2s;
+  --dist: 4.8125vmin;
+  --size: 50.6vmin;
+}
+ul li:nth-child(5)::after {
+  --size: 25.3vmin;
+}
+ul li:nth-child(5)::before {
+  --size: 12.65vmin;
+}
+ul li:nth-child(6) {
+  --delay: 0.24s;
+  --dist: 5.775vmin;
+  --size: 49.5vmin;
+}
+ul li:nth-child(6)::after {
+  --size: 24.75vmin;
+}
+ul li:nth-child(6)::before {
+  --size: 12.375vmin;
+}
+ul li:nth-child(7) {
+  --delay: 0.28s;
+  --dist: 6.7375vmin;
+  --size: 48.4vmin;
+}
+ul li:nth-child(7)::after {
+  --size: 24.2vmin;
+}
+ul li:nth-child(7)::before {
+  --size: 12.1vmin;
+}
+ul li:nth-child(8) {
+  --delay: 0.32s;
+  --dist: 7.7vmin;
+  --size: 47.3vmin;
+}
+ul li:nth-child(8)::after {
+  --size: 23.65vmin;
+}
+ul li:nth-child(8)::before {
+  --size: 11.825vmin;
+}
+ul li:nth-child(9) {
+  --delay: 0.36s;
+  --dist: 8.6625vmin;
+  --size: 46.2vmin;
+}
+ul li:nth-child(9)::after {
+  --size: 23.1vmin;
+}
+ul li:nth-child(9)::before {
+  --size: 11.55vmin;
+}
+ul li:nth-child(10) {
+  --delay: 0.4s;
+  --dist: 9.625vmin;
+  --size: 45.1vmin;
+}
+ul li:nth-child(10)::after {
+  --size: 22.55vmin;
+}
+ul li:nth-child(10)::before {
+  --size: 11.275vmin;
+}
+ul li:nth-child(11) {
+  --delay: 0.44s;
+  --dist: 10.5875vmin;
+  --size: 44vmin;
+}
+ul li:nth-child(11)::after {
+  --size: 22vmin;
+}
+ul li:nth-child(11)::before {
+  --size: 11vmin;
+}
+ul li:nth-child(12) {
+  --delay: 0.48s;
+  --dist: 11.55vmin;
+  --size: 42.9vmin;
+}
+ul li:nth-child(12)::after {
+  --size: 21.45vmin;
+}
+ul li:nth-child(12)::before {
+  --size: 10.725vmin;
+}
+ul li:nth-child(13) {
+  --delay: 0.52s;
+  --dist: 12.5125vmin;
+  --size: 41.8vmin;
+}
+ul li:nth-child(13)::after {
+  --size: 20.9vmin;
+}
+ul li:nth-child(13)::before {
+  --size: 10.45vmin;
+}
+ul li:nth-child(14) {
+  --delay: 0.56s;
+  --dist: 13.475vmin;
+  --size: 40.7vmin;
+}
+ul li:nth-child(14)::after {
+  --size: 20.35vmin;
+}
+ul li:nth-child(14)::before {
+  --size: 10.175vmin;
+}
+ul li:nth-child(15) {
+  --delay: 0.6s;
+  --dist: 14.4375vmin;
+  --size: 39.6vmin;
+}
+ul li:nth-child(15)::after {
+  --size: 19.8vmin;
+}
+ul li:nth-child(15)::before {
+  --size: 9.9vmin;
+}
+ul li:nth-child(16) {
+  --delay: 0.64s;
+  --dist: 15.4vmin;
+  --size: 38.5vmin;
+}
+ul li:nth-child(16)::after {
+  --size: 19.25vmin;
+}
+ul li:nth-child(16)::before {
+  --size: 9.625vmin;
+}
+ul li:nth-child(17) {
+  --delay: 0.68s;
+  --dist: 16.3625vmin;
+  --size: 37.4vmin;
+}
+ul li:nth-child(17)::after {
+  --size: 18.7vmin;
+}
+ul li:nth-child(17)::before {
+  --size: 9.35vmin;
+}
+ul li:nth-child(18) {
+  --delay: 0.72s;
+  --dist: 17.325vmin;
+  --size: 36.3vmin;
+}
+ul li:nth-child(18)::after {
+  --size: 18.15vmin;
+}
+ul li:nth-child(18)::before {
+  --size: 9.075vmin;
+}
+ul li:nth-child(19) {
+  --delay: 0.76s;
+  --dist: 18.2875vmin;
+  --size: 35.2vmin;
+}
+ul li:nth-child(19)::after {
+  --size: 17.6vmin;
+}
+ul li:nth-child(19)::before {
+  --size: 8.8vmin;
+}
+ul li:nth-child(20) {
+  --delay: 0.8s;
+  --dist: 19.25vmin;
+  --size: 34.1vmin;
+}
+ul li:nth-child(20)::after {
+  --size: 17.05vmin;
+}
+ul li:nth-child(20)::before {
+  --size: 8.525vmin;
+}
+ul li:nth-child(21) {
+  --delay: 0.84s;
+  --dist: 20.2125vmin;
+  --size: 33vmin;
+}
+ul li:nth-child(21)::after {
+  --size: 16.5vmin;
+}
+ul li:nth-child(21)::before {
+  --size: 8.25vmin;
+}
+ul li:nth-child(22) {
+  --delay: 0.88s;
+  --dist: 21.175vmin;
+  --size: 31.9vmin;
+}
+ul li:nth-child(22)::after {
+  --size: 15.95vmin;
+}
+ul li:nth-child(22)::before {
+  --size: 7.975vmin;
+}
+ul li:nth-child(23) {
+  --delay: 0.92s;
+  --dist: 22.1375vmin;
+  --size: 30.8vmin;
+}
+ul li:nth-child(23)::after {
+  --size: 15.4vmin;
+}
+ul li:nth-child(23)::before {
+  --size: 7.7vmin;
+}
+ul li:nth-child(24) {
+  --delay: 0.96s;
+  --dist: 23.1vmin;
+  --size: 29.7vmin;
+}
+ul li:nth-child(24)::after {
+  --size: 14.85vmin;
+}
+ul li:nth-child(24)::before {
+  --size: 7.425vmin;
+}
+ul li:nth-child(25) {
+  --delay: 1s;
+  --dist: 24.0625vmin;
+  --size: 28.6vmin;
+}
+ul li:nth-child(25)::after {
+  --size: 14.3vmin;
+}
+ul li:nth-child(25)::before {
+  --size: 7.15vmin;
+}
+ul li:nth-child(26) {
+  --delay: 1.04s;
+  --dist: 25.025vmin;
+  --size: 27.5vmin;
+}
+ul li:nth-child(26)::after {
+  --size: 13.75vmin;
+}
+ul li:nth-child(26)::before {
+  --size: 6.875vmin;
+}
+ul li:nth-child(27) {
+  --delay: 1.08s;
+  --dist: 25.9875vmin;
+  --size: 26.4vmin;
+}
+ul li:nth-child(27)::after {
+  --size: 13.2vmin;
+}
+ul li:nth-child(27)::before {
+  --size: 6.6vmin;
+}
+ul li:nth-child(28) {
+  --delay: 1.12s;
+  --dist: 26.95vmin;
+  --size: 25.3vmin;
+}
+ul li:nth-child(28)::after {
+  --size: 12.65vmin;
+}
+ul li:nth-child(28)::before {
+  --size: 6.325vmin;
+}
+ul li:nth-child(29) {
+  --delay: 1.16s;
+  --dist: 27.9125vmin;
+  --size: 24.2vmin;
+}
+ul li:nth-child(29)::after {
+  --size: 12.1vmin;
+}
+ul li:nth-child(29)::before {
+  --size: 6.05vmin;
+}
+ul li:nth-child(30) {
+  --delay: 1.2s;
+  --dist: 28.875vmin;
+  --size: 23.1vmin;
+}
+ul li:nth-child(30)::after {
+  --size: 11.55vmin;
+}
+ul li:nth-child(30)::before {
+  --size: 5.775vmin;
+}
+ul li:nth-child(31) {
+  --delay: 1.24s;
+  --dist: 29.8375vmin;
+  --size: 22vmin;
+}
+ul li:nth-child(31)::after {
+  --size: 11vmin;
+}
+ul li:nth-child(31)::before {
+  --size: 5.5vmin;
+}
+ul li:nth-child(32) {
+  --delay: 1.28s;
+  --dist: 30.8vmin;
+  --size: 20.9vmin;
+}
+ul li:nth-child(32)::after {
+  --size: 10.45vmin;
+}
+ul li:nth-child(32)::before {
+  --size: 5.225vmin;
+}
+ul li:nth-child(33) {
+  --delay: 1.32s;
+  --dist: 31.7625vmin;
+  --size: 19.8vmin;
+}
+ul li:nth-child(33)::after {
+  --size: 9.9vmin;
+}
+ul li:nth-child(33)::before {
+  --size: 4.95vmin;
+}
+ul li:nth-child(34) {
+  --delay: 1.36s;
+  --dist: 32.725vmin;
+  --size: 18.7vmin;
+}
+ul li:nth-child(34)::after {
+  --size: 9.35vmin;
+}
+ul li:nth-child(34)::before {
+  --size: 4.675vmin;
+}
+ul li:nth-child(35) {
+  --delay: 1.4s;
+  --dist: 33.6875vmin;
+  --size: 17.6vmin;
+}
+ul li:nth-child(35)::after {
+  --size: 8.8vmin;
+}
+ul li:nth-child(35)::before {
+  --size: 4.4vmin;
+}
+ul li:nth-child(36) {
+  --delay: 1.44s;
+  --dist: 34.65vmin;
+  --size: 16.5vmin;
+}
+ul li:nth-child(36)::after {
+  --size: 8.25vmin;
+}
+ul li:nth-child(36)::before {
+  --size: 4.125vmin;
+}
+ul li:nth-child(37) {
+  --delay: 1.48s;
+  --dist: 35.6125vmin;
+  --size: 15.4vmin;
+}
+ul li:nth-child(37)::after {
+  --size: 7.7vmin;
+}
+ul li:nth-child(37)::before {
+  --size: 3.85vmin;
+}
+ul li:nth-child(38) {
+  --delay: 1.52s;
+  --dist: 36.575vmin;
+  --size: 14.3vmin;
+}
+ul li:nth-child(38)::after {
+  --size: 7.15vmin;
+}
+ul li:nth-child(38)::before {
+  --size: 3.575vmin;
+}
+ul li:nth-child(39) {
+  --delay: 1.56s;
+  --dist: 37.5375vmin;
+  --size: 13.2vmin;
+}
+ul li:nth-child(39)::after {
+  --size: 6.6vmin;
+}
+ul li:nth-child(39)::before {
+  --size: 3.3vmin;
+}
+ul li:nth-child(40) {
+  --delay: 1.6s;
+  --dist: 38.5vmin;
+  --size: 12.1vmin;
+}
+ul li:nth-child(40)::after {
+  --size: 6.05vmin;
+}
+ul li:nth-child(40)::before {
+  --size: 3.025vmin;
+}
+ul li:nth-child(41) {
+  --delay: 1.64s;
+  --dist: 39.4625vmin;
+  --size: 11vmin;
+}
+ul li:nth-child(41)::after {
+  --size: 5.5vmin;
+}
+ul li:nth-child(41)::before {
+  --size: 2.75vmin;
+}
+ul li:nth-child(42) {
+  --delay: 1.68s;
+  --dist: 40.425vmin;
+  --size: 9.9vmin;
+}
+ul li:nth-child(42)::after {
+  --size: 4.95vmin;
+}
+ul li:nth-child(42)::before {
+  --size: 2.475vmin;
+}
+ul li:nth-child(43) {
+  --delay: 1.72s;
+  --dist: 41.3875vmin;
+  --size: 8.8vmin;
+}
+ul li:nth-child(43)::after {
+  --size: 4.4vmin;
+}
+ul li:nth-child(43)::before {
+  --size: 2.2vmin;
+}
+ul li:nth-child(44) {
+  --delay: 1.76s;
+  --dist: 42.35vmin;
+  --size: 7.7vmin;
+}
+ul li:nth-child(44)::after {
+  --size: 3.85vmin;
+}
+ul li:nth-child(44)::before {
+  --size: 1.925vmin;
+}
+ul li:nth-child(45) {
+  --delay: 1.8s;
+  --dist: 43.3125vmin;
+  --size: 6.6vmin;
+}
+ul li:nth-child(45)::after {
+  --size: 3.3vmin;
+}
+ul li:nth-child(45)::before {
+  --size: 1.65vmin;
+}
+ul li:nth-child(46) {
+  --delay: 1.84s;
+  --dist: 44.275vmin;
+  --size: 5.5vmin;
+}
+ul li:nth-child(46)::after {
+  --size: 2.75vmin;
+}
+ul li:nth-child(46)::before {
+  --size: 1.375vmin;
+}
+ul li:nth-child(47) {
+  --delay: 1.88s;
+  --dist: 45.2375vmin;
+  --size: 4.4vmin;
+}
+ul li:nth-child(47)::after {
+  --size: 2.2vmin;
+}
+ul li:nth-child(47)::before {
+  --size: 1.1vmin;
+}
+ul li:nth-child(48) {
+  --delay: 1.92s;
+  --dist: 46.2vmin;
+  --size: 3.3vmin;
+}
+ul li:nth-child(48)::after {
+  --size: 1.65vmin;
+}
+ul li:nth-child(48)::before {
+  --size: 0.825vmin;
+}
+ul li:nth-child(49) {
+  --delay: 1.96s;
+  --dist: 47.1625vmin;
+  --size: 2.2vmin;
+}
+ul li:nth-child(49)::after {
+  --size: 1.1vmin;
+}
+ul li:nth-child(49)::before {
+  --size: 0.55vmin;
+}
+ul li:nth-child(50) {
+  --delay: 2s;
+  --dist: 48.125vmin;
+  --size: 1.1vmin;
+}
+ul li:nth-child(50)::after {
+  --size: 0.55vmin;
+}
+ul li:nth-child(50)::before {
+  --size: 0.275vmin;
+}
+ul li:nth-child(51) {
+  --delay: 0.04s;
+  --dist: -0.9625vmin;
+  --size: 55vmin;
+}
+ul li:nth-child(51)::after {
+  --size: 27.5vmin;
+}
+ul li:nth-child(51)::before {
+  --size: 13.75vmin;
+}
+ul li:nth-child(52) {
+  --delay: 0.08s;
+  --dist: -1.925vmin;
+  --size: 53.9vmin;
+}
+ul li:nth-child(52)::after {
+  --size: 26.95vmin;
+}
+ul li:nth-child(52)::before {
+  --size: 13.475vmin;
+}
+ul li:nth-child(53) {
+  --delay: 0.12s;
+  --dist: -2.8875vmin;
+  --size: 52.8vmin;
+}
+ul li:nth-child(53)::after {
+  --size: 26.4vmin;
+}
+ul li:nth-child(53)::before {
+  --size: 13.2vmin;
+}
+ul li:nth-child(54) {
+  --delay: 0.16s;
+  --dist: -3.85vmin;
+  --size: 51.7vmin;
+}
+ul li:nth-child(54)::after {
+  --size: 25.85vmin;
+}
+ul li:nth-child(54)::before {
+  --size: 12.925vmin;
+}
+ul li:nth-child(55) {
+  --delay: 0.2s;
+  --dist: -4.8125vmin;
+  --size: 50.6vmin;
+}
+ul li:nth-child(55)::after {
+  --size: 25.3vmin;
+}
+ul li:nth-child(55)::before {
+  --size: 12.65vmin;
+}
+ul li:nth-child(56) {
+  --delay: 0.24s;
+  --dist: -5.775vmin;
+  --size: 49.5vmin;
+}
+ul li:nth-child(56)::after {
+  --size: 24.75vmin;
+}
+ul li:nth-child(56)::before {
+  --size: 12.375vmin;
+}
+ul li:nth-child(57) {
+  --delay: 0.28s;
+  --dist: -6.7375vmin;
+  --size: 48.4vmin;
+}
+ul li:nth-child(57)::after {
+  --size: 24.2vmin;
+}
+ul li:nth-child(57)::before {
+  --size: 12.1vmin;
+}
+ul li:nth-child(58) {
+  --delay: 0.32s;
+  --dist: -7.7vmin;
+  --size: 47.3vmin;
+}
+ul li:nth-child(58)::after {
+  --size: 23.65vmin;
+}
+ul li:nth-child(58)::before {
+  --size: 11.825vmin;
+}
+ul li:nth-child(59) {
+  --delay: 0.36s;
+  --dist: -8.6625vmin;
+  --size: 46.2vmin;
+}
+ul li:nth-child(59)::after {
+  --size: 23.1vmin;
+}
+ul li:nth-child(59)::before {
+  --size: 11.55vmin;
+}
+ul li:nth-child(60) {
+  --delay: 0.4s;
+  --dist: -9.625vmin;
+  --size: 45.1vmin;
+}
+ul li:nth-child(60)::after {
+  --size: 22.55vmin;
+}
+ul li:nth-child(60)::before {
+  --size: 11.275vmin;
+}
+ul li:nth-child(61) {
+  --delay: 0.44s;
+  --dist: -10.5875vmin;
+  --size: 44vmin;
+}
+ul li:nth-child(61)::after {
+  --size: 22vmin;
+}
+ul li:nth-child(61)::before {
+  --size: 11vmin;
+}
+ul li:nth-child(62) {
+  --delay: 0.48s;
+  --dist: -11.55vmin;
+  --size: 42.9vmin;
+}
+ul li:nth-child(62)::after {
+  --size: 21.45vmin;
+}
+ul li:nth-child(62)::before {
+  --size: 10.725vmin;
+}
+ul li:nth-child(63) {
+  --delay: 0.52s;
+  --dist: -12.5125vmin;
+  --size: 41.8vmin;
+}
+ul li:nth-child(63)::after {
+  --size: 20.9vmin;
+}
+ul li:nth-child(63)::before {
+  --size: 10.45vmin;
+}
+ul li:nth-child(64) {
+  --delay: 0.56s;
+  --dist: -13.475vmin;
+  --size: 40.7vmin;
+}
+ul li:nth-child(64)::after {
+  --size: 20.35vmin;
+}
+ul li:nth-child(64)::before {
+  --size: 10.175vmin;
+}
+ul li:nth-child(65) {
+  --delay: 0.6s;
+  --dist: -14.4375vmin;
+  --size: 39.6vmin;
+}
+ul li:nth-child(65)::after {
+  --size: 19.8vmin;
+}
+ul li:nth-child(65)::before {
+  --size: 9.9vmin;
+}
+ul li:nth-child(66) {
+  --delay: 0.64s;
+  --dist: -15.4vmin;
+  --size: 38.5vmin;
+}
+ul li:nth-child(66)::after {
+  --size: 19.25vmin;
+}
+ul li:nth-child(66)::before {
+  --size: 9.625vmin;
+}
+ul li:nth-child(67) {
+  --delay: 0.68s;
+  --dist: -16.3625vmin;
+  --size: 37.4vmin;
+}
+ul li:nth-child(67)::after {
+  --size: 18.7vmin;
+}
+ul li:nth-child(67)::before {
+  --size: 9.35vmin;
+}
+ul li:nth-child(68) {
+  --delay: 0.72s;
+  --dist: -17.325vmin;
+  --size: 36.3vmin;
+}
+ul li:nth-child(68)::after {
+  --size: 18.15vmin;
+}
+ul li:nth-child(68)::before {
+  --size: 9.075vmin;
+}
+ul li:nth-child(69) {
+  --delay: 0.76s;
+  --dist: -18.2875vmin;
+  --size: 35.2vmin;
+}
+ul li:nth-child(69)::after {
+  --size: 17.6vmin;
+}
+ul li:nth-child(69)::before {
+  --size: 8.8vmin;
+}
+ul li:nth-child(70) {
+  --delay: 0.8s;
+  --dist: -19.25vmin;
+  --size: 34.1vmin;
+}
+ul li:nth-child(70)::after {
+  --size: 17.05vmin;
+}
+ul li:nth-child(70)::before {
+  --size: 8.525vmin;
+}
+ul li:nth-child(71) {
+  --delay: 0.84s;
+  --dist: -20.2125vmin;
+  --size: 33vmin;
+}
+ul li:nth-child(71)::after {
+  --size: 16.5vmin;
+}
+ul li:nth-child(71)::before {
+  --size: 8.25vmin;
+}
+ul li:nth-child(72) {
+  --delay: 0.88s;
+  --dist: -21.175vmin;
+  --size: 31.9vmin;
+}
+ul li:nth-child(72)::after {
+  --size: 15.95vmin;
+}
+ul li:nth-child(72)::before {
+  --size: 7.975vmin;
+}
+ul li:nth-child(73) {
+  --delay: 0.92s;
+  --dist: -22.1375vmin;
+  --size: 30.8vmin;
+}
+ul li:nth-child(73)::after {
+  --size: 15.4vmin;
+}
+ul li:nth-child(73)::before {
+  --size: 7.7vmin;
+}
+ul li:nth-child(74) {
+  --delay: 0.96s;
+  --dist: -23.1vmin;
+  --size: 29.7vmin;
+}
+ul li:nth-child(74)::after {
+  --size: 14.85vmin;
+}
+ul li:nth-child(74)::before {
+  --size: 7.425vmin;
+}
+ul li:nth-child(75) {
+  --delay: 1s;
+  --dist: -24.0625vmin;
+  --size: 28.6vmin;
+}
+ul li:nth-child(75)::after {
+  --size: 14.3vmin;
+}
+ul li:nth-child(75)::before {
+  --size: 7.15vmin;
+}
+ul li:nth-child(76) {
+  --delay: 1.04s;
+  --dist: -25.025vmin;
+  --size: 27.5vmin;
+}
+ul li:nth-child(76)::after {
+  --size: 13.75vmin;
+}
+ul li:nth-child(76)::before {
+  --size: 6.875vmin;
+}
+ul li:nth-child(77) {
+  --delay: 1.08s;
+  --dist: -25.9875vmin;
+  --size: 26.4vmin;
+}
+ul li:nth-child(77)::after {
+  --size: 13.2vmin;
+}
+ul li:nth-child(77)::before {
+  --size: 6.6vmin;
+}
+ul li:nth-child(78) {
+  --delay: 1.12s;
+  --dist: -26.95vmin;
+  --size: 25.3vmin;
+}
+ul li:nth-child(78)::after {
+  --size: 12.65vmin;
+}
+ul li:nth-child(78)::before {
+  --size: 6.325vmin;
+}
+ul li:nth-child(79) {
+  --delay: 1.16s;
+  --dist: -27.9125vmin;
+  --size: 24.2vmin;
+}
+ul li:nth-child(79)::after {
+  --size: 12.1vmin;
+}
+ul li:nth-child(79)::before {
+  --size: 6.05vmin;
+}
+ul li:nth-child(80) {
+  --delay: 1.2s;
+  --dist: -28.875vmin;
+  --size: 23.1vmin;
+}
+ul li:nth-child(80)::after {
+  --size: 11.55vmin;
+}
+ul li:nth-child(80)::before {
+  --size: 5.775vmin;
+}
+ul li:nth-child(81) {
+  --delay: 1.24s;
+  --dist: -29.8375vmin;
+  --size: 22vmin;
+}
+ul li:nth-child(81)::after {
+  --size: 11vmin;
+}
+ul li:nth-child(81)::before {
+  --size: 5.5vmin;
+}
+ul li:nth-child(82) {
+  --delay: 1.28s;
+  --dist: -30.8vmin;
+  --size: 20.9vmin;
+}
+ul li:nth-child(82)::after {
+  --size: 10.45vmin;
+}
+ul li:nth-child(82)::before {
+  --size: 5.225vmin;
+}
+ul li:nth-child(83) {
+  --delay: 1.32s;
+  --dist: -31.7625vmin;
+  --size: 19.8vmin;
+}
+ul li:nth-child(83)::after {
+  --size: 9.9vmin;
+}
+ul li:nth-child(83)::before {
+  --size: 4.95vmin;
+}
+ul li:nth-child(84) {
+  --delay: 1.36s;
+  --dist: -32.725vmin;
+  --size: 18.7vmin;
+}
+ul li:nth-child(84)::after {
+  --size: 9.35vmin;
+}
+ul li:nth-child(84)::before {
+  --size: 4.675vmin;
+}
+ul li:nth-child(85) {
+  --delay: 1.4s;
+  --dist: -33.6875vmin;
+  --size: 17.6vmin;
+}
+ul li:nth-child(85)::after {
+  --size: 8.8vmin;
+}
+ul li:nth-child(85)::before {
+  --size: 4.4vmin;
+}
+ul li:nth-child(86) {
+  --delay: 1.44s;
+  --dist: -34.65vmin;
+  --size: 16.5vmin;
+}
+ul li:nth-child(86)::after {
+  --size: 8.25vmin;
+}
+ul li:nth-child(86)::before {
+  --size: 4.125vmin;
+}
+ul li:nth-child(87) {
+  --delay: 1.48s;
+  --dist: -35.6125vmin;
+  --size: 15.4vmin;
+}
+ul li:nth-child(87)::after {
+  --size: 7.7vmin;
+}
+ul li:nth-child(87)::before {
+  --size: 3.85vmin;
+}
+ul li:nth-child(88) {
+  --delay: 1.52s;
+  --dist: -36.575vmin;
+  --size: 14.3vmin;
+}
+ul li:nth-child(88)::after {
+  --size: 7.15vmin;
+}
+ul li:nth-child(88)::before {
+  --size: 3.575vmin;
+}
+ul li:nth-child(89) {
+  --delay: 1.56s;
+  --dist: -37.5375vmin;
+  --size: 13.2vmin;
+}
+ul li:nth-child(89)::after {
+  --size: 6.6vmin;
+}
+ul li:nth-child(89)::before {
+  --size: 3.3vmin;
+}
+ul li:nth-child(90) {
+  --delay: 1.6s;
+  --dist: -38.5vmin;
+  --size: 12.1vmin;
+}
+ul li:nth-child(90)::after {
+  --size: 6.05vmin;
+}
+ul li:nth-child(90)::before {
+  --size: 3.025vmin;
+}
+ul li:nth-child(91) {
+  --delay: 1.64s;
+  --dist: -39.4625vmin;
+  --size: 11vmin;
+}
+ul li:nth-child(91)::after {
+  --size: 5.5vmin;
+}
+ul li:nth-child(91)::before {
+  --size: 2.75vmin;
+}
+ul li:nth-child(92) {
+  --delay: 1.68s;
+  --dist: -40.425vmin;
+  --size: 9.9vmin;
+}
+ul li:nth-child(92)::after {
+  --size: 4.95vmin;
+}
+ul li:nth-child(92)::before {
+  --size: 2.475vmin;
+}
+ul li:nth-child(93) {
+  --delay: 1.72s;
+  --dist: -41.3875vmin;
+  --size: 8.8vmin;
+}
+ul li:nth-child(93)::after {
+  --size: 4.4vmin;
+}
+ul li:nth-child(93)::before {
+  --size: 2.2vmin;
+}
+ul li:nth-child(94) {
+  --delay: 1.76s;
+  --dist: -42.35vmin;
+  --size: 7.7vmin;
+}
+ul li:nth-child(94)::after {
+  --size: 3.85vmin;
+}
+ul li:nth-child(94)::before {
+  --size: 1.925vmin;
+}
+ul li:nth-child(95) {
+  --delay: 1.8s;
+  --dist: -43.3125vmin;
+  --size: 6.6vmin;
+}
+ul li:nth-child(95)::after {
+  --size: 3.3vmin;
+}
+ul li:nth-child(95)::before {
+  --size: 1.65vmin;
+}
+ul li:nth-child(96) {
+  --delay: 1.84s;
+  --dist: -44.275vmin;
+  --size: 5.5vmin;
+}
+ul li:nth-child(96)::after {
+  --size: 2.75vmin;
+}
+ul li:nth-child(96)::before {
+  --size: 1.375vmin;
+}
+ul li:nth-child(97) {
+  --delay: 1.88s;
+  --dist: -45.2375vmin;
+  --size: 4.4vmin;
+}
+ul li:nth-child(97)::after {
+  --size: 2.2vmin;
+}
+ul li:nth-child(97)::before {
+  --size: 1.1vmin;
+}
+ul li:nth-child(98) {
+  --delay: 1.92s;
+  --dist: -46.2vmin;
+  --size: 3.3vmin;
+}
+ul li:nth-child(98)::after {
+  --size: 1.65vmin;
+}
+ul li:nth-child(98)::before {
+  --size: 0.825vmin;
+}
+ul li:nth-child(99) {
+  --delay: 1.96s;
+  --dist: -47.1625vmin;
+  --size: 2.2vmin;
+}
+ul li:nth-child(99)::after {
+  --size: 1.1vmin;
+}
+ul li:nth-child(99)::before {
+  --size: 0.55vmin;
+}
+ul li:nth-child(100) {
+  --delay: 2s;
+  --dist: -48.125vmin;
+  --size: 1.1vmin;
+}
+ul li:nth-child(100)::after {
+  --size: 0.55vmin;
+}
+ul li:nth-child(100)::before {
+  --size: 0.275vmin;
+}
+
+li {
+  -webkit-animation: anim-h 2s var(--delay, 0s) ease-in-out infinite alternate;
+          animation: anim-h 2s var(--delay, 0s) ease-in-out infinite alternate;
+  box-shadow: 0 0 2.75vmin 0.6875vmin rgba(61, 132, 168, 0.25) inset;
+}
+li, li::after, li::before {
+  height: var(--size);
+  width: var(--size);
+  position: absolute;
+}
+li::before, li::after {
+  content: "";
+}
+li::after {
+  -webkit-animation: anim-s 2s ease-in-out infinite alternate;
+          animation: anim-s 2s ease-in-out infinite alternate;
+  border-radius: 50%;
+  box-shadow: 0 0 1.375vmin 0.34375vmin rgba(70, 205, 207, 0.25) inset;
+}
+li::before {
+  -webkit-animation: anim-spin 2s var(--delay, 0s) linear infinite;
+          animation: anim-spin 2s var(--delay, 0s) linear infinite;
+  box-shadow: 0 0 0.6875vmin 0.171875vmin rgba(171, 237, 216, 0.75) inset;
+}
+li:last-child {
+  --size: 55vmin;
+}
+li:last-child::after {
+  --size: 27.5vmin;
+}
+li:last-child::before {
+  --size: 13.75vmin;
+}

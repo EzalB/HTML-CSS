@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll(".input");
+const inputs = document.querySelectorAll("#input");
 
 
 function addcl(){
@@ -12,7 +12,6 @@ function remcl(){
 		parent.classList.remove("focus");
 	}
 }
-
 
 inputs.forEach(input => {
 	input.addEventListener("focus", addcl);

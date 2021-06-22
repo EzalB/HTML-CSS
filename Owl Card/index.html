@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>owl carousel Images Sliders</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- owl caousel cdn ( css )-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<body>
+    <div id="container">
+        <div class="sliders">
+            <!-- card no 1 -->
+            <div class="cards">
+                <!-- profile images -->
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image1.jpg" alt="">
+                    </div>
+                </div>
+
+                <!-- user name -->
+                <h2>ANAYA</h2>
+                <p>WEB DEVELOPER</p>
+
+                <!-- cards Buttons -->
+                <div class="messages">
+                    <div class="btns">
+                        <button>Profile</button>
+                    </div>
+                    <div class="btns">
+                        <button>Messages</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- duplicate card according to your need -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image2.jpg" alt="">
+                    </div>
+                </div>
+                <h2>ALEXA</h2>
+                <p>GAMES DEVELOPER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 3 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image3.jpg" alt="">
+                    </div>
+                </div>
+                <h2>RACHEl</h2>
+                <p>UX DESIGNER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 4 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image4.jpg" alt="">
+                    </div>
+                </div>
+                <h2>HALE</h2>
+                <p>WEB DEVELOPER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 5 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image5.jpg" alt="">
+                    </div>
+                </div>
+                <h2>CRISS</h2>
+                <p>UI DESIGNER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 6 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image6.jpg" alt="">
+                    </div>
+                </div>
+                <h2>AHSAN</h2>
+                <p>GAMES DEVELOPER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 7 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image7.jpg" alt="">
+                    </div>
+                </div>
+                <h2>HANIA</h2>
+                <p>FASHION DESIGNER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+            <!-- card no 8 -->
+            <div class="cards">
+                <div class="profile">
+                    <div class="images">
+                        <img src="assets/image8.jpg" alt="">
+                    </div>
+                </div>
+                <h2>ROOH</h2>
+                <p>APP DEVELOPER</p>
+                <div class="messages">
+                    <div class="btns">
+                    <button>Profile</button>
+                </div>
+                <div class="btns">
+                    <button>Messages</button>
+                </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- owl carousel cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".sliders").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
+            });
+        })
+    </script>
+</body>
+</html>

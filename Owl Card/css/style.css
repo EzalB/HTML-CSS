@@ -1,0 +1,119 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #ebf2fa;;
+}
+#container
+{
+    height: 500px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.sliders
+{
+    height: 500px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.cards
+{
+    height: 450px;
+    width: 350px;
+    margin: 0px 25px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 3px rgba(255,255,255,0.8),inset -3px -3px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+}
+.profile
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px rgba(255,255,255,0.8),-3px -3px 4px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 75px);
+    display: grid;
+    place-items: center;
+}
+.images
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 10px solid #705fff;
+    overflow: hidden;
+}
+.images img
+{
+    width: 100%;
+}
+h2
+{
+    position: absolute;
+    top: 200px;
+}
+p
+{
+    position: absolute;
+    top: 240px;
+}
+.messages
+{
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    flex-direction: row;
+}
+.btns
+{
+    height: 60px;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    box-shadow:inset 3px 3px 1px rgba(255,255,255,1),inset -3px -3px 2px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    margin: 0 10px;
+}
+.btns button
+{
+    font-size: 17px;
+    height: 50px;
+    width: 130px;
+    border: none;
+    outline: none;
+    background: #705fff;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.owl-nav
+{
+    display: none;
+}
+.owl-dot
+{
+    display: none;
+}
+.owl-stage
+{
+    display: flex;
+    flex-direction: row;
+}
+

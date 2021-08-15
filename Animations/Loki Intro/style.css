@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee+Shade&family=Cabin+Sketch&family=Cinzel&family=Dancing+Script&family=Gloria+Hallelujah&family=Indie+Flower&family=Lobster&family=Monoton&family=Mountains+of+Christmas&family=Pacifico&family=Reenie+Beanie&family=Roboto&family=Roboto+Mono&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: black;
+  color: #f0efeb;
+}
+
+.hidden {
+  display: none;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 2rem;
+  cursor: pointer;
+}
+
+input {
+  padding: 0.5rem;
+  outline: none;
+  border:  2px solid #81b29a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: none;
+  color: white;
+  border: 2px solid white;
+  text-shadow: 0 0 7px #f0efeb, 0 0 10px #f0efeb;
+}
+
+.name {
+  animation: zoom 60s infinite;
+  transform: scale(0.5);
+}
+.letter {
+  display: inline-flex;
+  width: 4rem;
+  font-size: 4rem;
+  justify-content: center;
+
+  text-shadow: 0 0 7px #f0efeb, 0 0 10px #f0efeb, 0 0 21px #f0efeb;
+
+  min-height: 50vh;
+  align-items: center;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5);
+  }
+  45% {
+    transform: scale(1.25);
+  }
+  55% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@media (min-width: 400px) {
+  .letter {
+    width: 6rem;
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .letter {
+    width: 8rem;
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .letter {
+    width: 10rem;
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .letter {
+    width: 12rem;
+    font-size: 12rem;
+  }
+}
